@@ -4,7 +4,7 @@
 
 🌍 Srinagar, India &nbsp;|&nbsp; 📧 tajamulislam.100@gmail.com &nbsp;|&nbsp; 📞 +91 91494 79287
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/tajamul-islam7112b21a5)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/tajamul-islam-7112b21a5)
 [![Portfolio](https://img.shields.io/badge/Portfolio-2563EB?style=for-the-badge&logo=github&logoColor=white)](https://tajamulkakroo.github.io)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:tajamulislam.100@gmail.com)
 
