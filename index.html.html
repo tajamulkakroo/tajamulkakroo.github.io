@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tajamul Islam Kakroo — Senior Business Analyst & Project Manager</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:    #0A1628;
+    --navy2:   #162840;
+    --blue:    #2563EB;
+    --blue2:   #1D4ED8;
+    --teal:    #0D9488;
+    --white:   #FFFFFF;
+    --off:     #F8FAFC;
+    --gray:    #64748B;
+    --lgray:   #E2E8F0;
+    --dark:    #0F172A;
+    --red:     #E63946;
+    --green:   #059669;
+    --amber:   #D97706;
+    --text:    #1E293B;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--white);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(10,22,40,0.97);
+    backdrop-filter: blur(12px);
+    padding: 0 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px;
+    border-bottom: 1px solid rgba(37,99,235,0.2);
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem; color: var(--white); font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  .nav-logo span { color: var(--blue); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: #94A3B8; text-decoration: none; font-size: 0.875rem;
+    font-weight: 500; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--white); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    background: var(--navy);
+    display: flex; align-items: center;
+    padding: 5rem 2rem 4rem;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 70% 40%, rgba(37,99,235,0.12) 0%, transparent 70%);
+  }
+  .hero-grid {
+    max-width: 1100px; margin: 0 auto; width: 100%;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+  }
+  .hero-tag {
+    display: inline-block;
+    background: rgba(37,99,235,0.15);
+    border: 1px solid rgba(37,99,235,0.3);
+    color: #93C5FD; font-size: 0.75rem; font-weight: 600;
+    padding: 0.35rem 0.85rem; border-radius: 20px;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    margin-bottom: 1.25rem;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    color: var(--white); line-height: 1.15;
+    font-weight: 800; margin-bottom: 1rem;
+  }
+  .hero h1 em { color: var(--blue); font-style: normal; }
+  .hero-sub {
+    color: #94A3B8; font-size: 1rem; line-height: 1.7;
+    margin-bottom: 2rem; max-width: 480px;
+  }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--blue); color: var(--white);
+    padding: 0.75rem 1.75rem; border-radius: 8px;
+    text-decoration: none; font-weight: 600; font-size: 0.9rem;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--blue2); transform: translateY(-1px); }
+  .btn-outline {
+    border: 1.5px solid rgba(148,163,184,0.4); color: #94A3B8;
+    padding: 0.75rem 1.75rem; border-radius: 8px;
+    text-decoration: none; font-weight: 600; font-size: 0.9rem;
+    transition: border-color 0.2s, color 0.2s;
+    display: inline-block;
+  }
+  .btn-outline:hover { border-color: var(--blue); color: var(--white); }
+
+  /* Hero stats */
+  .hero-stats {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;
+  }
+  .stat-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px; padding: 1.5rem;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .stat-card:hover {
+    border-color: rgba(37,99,235,0.4);
+    background: rgba(37,99,235,0.06);
+  }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem; font-weight: 700; color: var(--white);
+    line-height: 1; margin-bottom: 0.35rem;
+  }
+  .stat-num span { color: var(--blue); }
+  .stat-label { color: #94A3B8; font-size: 0.8rem; font-weight: 500; }
+  .stat-sub { color: #64748B; font-size: 0.72rem; margin-top: 0.2rem; }
+
+  /* SECTIONS */
+  section { padding: 5rem 2rem; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-tag {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--blue);
+    margin-bottom: 0.6rem; display: block;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.75rem, 3vw, 2.4rem);
+    font-weight: 800; color: var(--dark);
+    line-height: 1.2; margin-bottom: 0.75rem;
+  }
+  .section-sub {
+    color: var(--gray); font-size: 1rem; max-width: 580px;
+    margin-bottom: 3rem; line-height: 1.7;
+  }
+
+  /* ABOUT */
+  .about { background: var(--off); }
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start;
+  }
+  .about-left { }
+  .about-avatar {
+    width: 140px; height: 140px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--blue), var(--teal));
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem; color: var(--white); font-weight: 700;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 0 4px var(--white), 0 0 0 6px rgba(37,99,235,0.3);
+  }
+  .about-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem; font-weight: 700; color: var(--dark);
+    margin-bottom: 0.35rem;
+  }
+  .about-role { color: var(--blue); font-weight: 600; font-size: 0.9rem; margin-bottom: 1rem; }
+  .about-contact { list-style: none; }
+  .about-contact li {
+    display: flex; align-items: center; gap: 0.6rem;
+    color: var(--gray); font-size: 0.875rem; margin-bottom: 0.6rem;
+  }
+  .about-contact li strong { color: var(--dark); }
+  .about-body { color: var(--gray); line-height: 1.8; font-size: 0.975rem; }
+  .about-body p { margin-bottom: 1rem; }
+  .highlight { color: var(--blue); font-weight: 600; }
+
+  /* EXPERTISE */
+  .expertise-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+  }
+  .exp-card {
+    background: var(--white); border: 1px solid var(--lgray);
+    border-radius: 14px; padding: 2rem;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+    position: relative; overflow: hidden;
+  }
+  .exp-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  }
+  .exp-card.primary::before { background: var(--blue); }
+  .exp-card.secondary::before { background: var(--teal); }
+  .exp-card.tertiary::before { background: var(--amber); }
+  .exp-card:hover {
+    border-color: var(--blue); box-shadow: 0 8px 32px rgba(37,99,235,0.1);
+    transform: translateY(-3px);
+  }
+  .exp-icon {
+    width: 48px; height: 48px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem; margin-bottom: 1.25rem;
+  }
+  .exp-icon.blue { background: rgba(37,99,235,0.1); }
+  .exp-icon.teal { background: rgba(13,148,136,0.1); }
+  .exp-icon.amber { background: rgba(217,119,6,0.1); }
+  .exp-card h3 { font-size: 1rem; font-weight: 700; color: var(--dark); margin-bottom: 0.75rem; }
+  .exp-card p { color: var(--gray); font-size: 0.875rem; line-height: 1.7; margin-bottom: 1rem; }
+  .exp-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .tag {
+    background: var(--off); border: 1px solid var(--lgray);
+    color: var(--gray); font-size: 0.72rem; font-weight: 500;
+    padding: 0.2rem 0.6rem; border-radius: 6px;
+  }
+
+  /* EXPERIENCE */
+  .experience { background: var(--navy); }
+  .experience .section-title { color: var(--white); }
+  .experience .section-sub { color: #64748B; }
+  .experience .section-tag { color: #93C5FD; }
+  .timeline { position: relative; }
+  .timeline::before {
+    content: ''; position: absolute; left: 20px; top: 8px; bottom: 8px;
+    width: 2px; background: rgba(37,99,235,0.3);
+  }
+  .timeline-item {
+    display: grid; grid-template-columns: 44px 1fr; gap: 1.5rem;
+    margin-bottom: 2.5rem; position: relative;
+  }
+  .timeline-dot {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--navy2); border: 2px solid var(--blue);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem; flex-shrink: 0; position: relative; z-index: 1;
+  }
+  .timeline-content {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px; padding: 1.75rem;
+    transition: border-color 0.2s;
+  }
+  .timeline-content:hover { border-color: rgba(37,99,235,0.3); }
+  .timeline-header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.5rem;
+  }
+  .timeline-role { font-weight: 700; color: var(--white); font-size: 1rem; }
+  .timeline-company { color: var(--blue); font-weight: 600; font-size: 0.875rem; margin-bottom: 0.35rem; }
+  .timeline-date {
+    background: rgba(37,99,235,0.15); color: #93C5FD;
+    font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.75rem;
+    border-radius: 20px; white-space: nowrap;
+  }
+  .timeline-desc { color: #94A3B8; font-size: 0.875rem; line-height: 1.7; margin-bottom: 1rem; }
+  .achievements { list-style: none; }
+  .achievements li {
+    color: #94A3B8; font-size: 0.85rem; padding: 0.35rem 0;
+    display: flex; gap: 0.6rem; align-items: flex-start;
+  }
+  .achievements li::before {
+    content: '▶'; color: var(--blue); font-size: 0.6rem;
+    flex-shrink: 0; margin-top: 0.3rem;
+  }
+  .achievements li strong { color: #E2E8F0; }
+
+  /* IMPACT METRICS */
+  .metrics { background: var(--off); }
+  .metrics-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;
+  }
+  .metric-card {
+    background: var(--white); border: 1px solid var(--lgray);
+    border-radius: 14px; padding: 2rem 1.5rem; text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .metric-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
+  .metric-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem; font-weight: 800; color: var(--blue);
+    line-height: 1; margin-bottom: 0.5rem;
+  }
+  .metric-label { color: var(--dark); font-weight: 600; font-size: 0.875rem; margin-bottom: 0.35rem; }
+  .metric-sub { color: var(--gray); font-size: 0.775rem; }
+
+  /* SKILLS */
+  .skills-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;
+  }
+  .skill-group h3 {
+    font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--blue);
+    margin-bottom: 1rem; padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--lgray);
+  }
+  .skill-item {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 0.85rem;
+  }
+  .skill-name { font-size: 0.875rem; font-weight: 500; color: var(--dark); }
+  .skill-bar {
+    width: 160px; height: 6px; background: var(--lgray); border-radius: 3px;
+    overflow: hidden;
+  }
+  .skill-fill {
+    height: 100%; border-radius: 3px;
+    background: linear-gradient(90deg, var(--blue), var(--teal));
+    transition: width 1s ease;
+  }
+
+  /* TOOLS */
+  .tools-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;
+    margin-top: 2rem;
+  }
+  .tool-category {
+    background: var(--white); border: 1px solid var(--lgray);
+    border-radius: 12px; padding: 1.5rem;
+  }
+  .tool-category h4 {
+    font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--gray);
+    margin-bottom: 0.85rem;
+  }
+  .tool-pills { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .tool-pill {
+    background: var(--off); border: 1px solid var(--lgray);
+    color: var(--text); font-size: 0.78rem; font-weight: 500;
+    padding: 0.3rem 0.75rem; border-radius: 20px;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .tool-pill:hover { background: rgba(37,99,235,0.08); border-color: var(--blue); color: var(--blue); }
+
+  /* DOMAIN */
+  .domain { background: var(--navy); }
+  .domain .section-title { color: var(--white); }
+  .domain .section-sub { color: #64748B; }
+  .domain .section-tag { color: #93C5FD; }
+  .domain-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;
+  }
+  .domain-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px; padding: 1.75rem;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .domain-card:hover {
+    border-color: rgba(37,99,235,0.4);
+    background: rgba(37,99,235,0.06);
+  }
+  .domain-card h3 { color: var(--white); font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem; }
+  .domain-card p { color: #94A3B8; font-size: 0.85rem; line-height: 1.7; }
+  .domain-icon { font-size: 1.8rem; margin-bottom: 0.85rem; }
+
+  /* CONTACT */
+  .contact { background: var(--off); }
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+  }
+  .contact-info h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem; font-weight: 800; color: var(--dark); margin-bottom: 1rem;
+  }
+  .contact-info p { color: var(--gray); line-height: 1.7; margin-bottom: 2rem; }
+  .contact-items { list-style: none; }
+  .contact-items li {
+    display: flex; gap: 1rem; align-items: flex-start;
+    margin-bottom: 1.25rem;
+  }
+  .contact-icon {
+    width: 40px; height: 40px; border-radius: 10px;
+    background: rgba(37,99,235,0.1); display: flex;
+    align-items: center; justify-content: center; font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+  .contact-label { font-size: 0.75rem; color: var(--gray); font-weight: 500; }
+  .contact-value { font-size: 0.9rem; color: var(--dark); font-weight: 600; }
+  .availability {
+    background: rgba(5,150,105,0.1); border: 1px solid rgba(5,150,105,0.25);
+    border-radius: 10px; padding: 1rem 1.5rem;
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+  .avail-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--green); flex-shrink: 0;
+    box-shadow: 0 0 0 3px rgba(5,150,105,0.2);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 3px rgba(5,150,105,0.2); }
+    50% { box-shadow: 0 0 0 6px rgba(5,150,105,0.1); }
+  }
+  .avail-text { font-size: 0.875rem; color: var(--green); font-weight: 600; }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy); color: #475569;
+    text-align: center; padding: 2rem;
+    font-size: 0.85rem; border-top: 1px solid rgba(255,255,255,0.05);
+  }
+  footer span { color: var(--blue); }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+    .expertise-grid, .domain-grid { grid-template-columns: 1fr; }
+    .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+    .skills-grid, .tools-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .timeline::before { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Tajamul<span>.</span></div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#expertise">Expertise</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#impact">Impact</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-grid">
+    <div class="hero-left">
+      <div class="hero-tag">Available for Immediate Joining</div>
+      <h1>Senior <em>Business Analyst</em> & Project Manager</h1>
+      <p class="hero-sub">10+ years delivering scalable SaaS, ERP, and payments platforms across hospitality tech, fintech, and logistics. I bridge business and engineering — from requirement to release.</p>
+      <div class="hero-btns">
+        <a href="#experience" class="btn-primary">View Experience</a>
+        <a href="#contact" class="btn-outline">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-card">
+        <div class="stat-num">10<span>+</span></div>
+        <div class="stat-label">Years Experience</div>
+        <div class="stat-sub">BA · PM · Scrum Master</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">30<span>%</span></div>
+        <div class="stat-label">Production Failures Reduced</div>
+        <div class="stat-sub">Kayana — payments & ordering</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">60<span>%</span></div>
+        <div class="stat-label">QA Cycle Time Cut</div>
+        <div class="stat-sub">Via Playwright automation</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">9+</div>
+        <div class="stat-label">Platforms Managed Simultaneously</div>
+        <div class="stat-sub">Kiosk · EPOS · MPOS · KDS · Partners Admin · Web Admin · White Label Apps · Business Apps · Ticketing</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-left">
+        <div class="about-avatar">TK</div>
+        <div class="about-name">Tajamul Islam Kakroo</div>
+        <div class="about-role">Senior Business Analyst · Project Manager · Scrum Master</div>
+        <ul class="about-contact">
+          <li>📧 <strong>tajamulislam.100@gmail.com</strong></li>
+          <li>📞 <strong>+91 91494 79287</strong></li>
+          <li>📍 <strong>Srinagar, India</strong></li>
+          <li>🎓 <strong>B.Tech Computer Science — University of Kashmir, 2015</strong></li>
+          <li>⚡ <strong>Immediate joiner</strong></li>
+        </ul>
+      </div>
+      <div class="about-right">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Bridging Business & Technology for Over a Decade</h2>
+        <div class="about-body">
+          <p>I am a results-driven Senior Business Analyst and Project Manager with <span class="highlight">10+ years of experience</span> translating complex business needs into scalable digital solutions. My work spans SaaS platforms, ERP systems, EPOS technology, and payment integrations across hospitality, fintech, and logistics domains.</p>
+          <p>At <span class="highlight">Kayana</span>, a UK-based hospitality SaaS company, I owned the end-to-end product delivery lifecycle across nine platforms simultaneously — managing backlogs, leading Agile ceremonies as Scrum Master, owning production issues, and driving integrations with Stripe, Adyen, Uber Eats, and Just Eat.</p>
+          <p>At <span class="highlight">Qbil/Yarikul Infotech</span>, I led ERP implementations for international clients across finance, inventory, warehouse, and logistics — reducing QA cycle time by 60% through Playwright test automation and delivering complex multi-stakeholder programmes on time.</p>
+          <p>I combine strong analytical thinking, structured documentation discipline, and genuine technical literacy — comfortable with APIs, Postman, SQL, Figma, and automation frameworks alongside Jira, Confluence, and Lucidchart.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section id="expertise">
+  <div class="section-inner">
+    <span class="section-tag">Core Expertise</span>
+    <h2 class="section-title">What I Do Best</h2>
+    <p class="section-sub">Three interconnected disciplines — BA at the core, PM and QA as force multipliers.</p>
+    <div class="expertise-grid">
+      <div class="exp-card primary">
+        <div class="exp-icon blue">📋</div>
+        <h3>Business Analysis & Product Management</h3>
+        <p>End-to-end requirements lifecycle — from stakeholder discovery and BRD creation to user stories, acceptance criteria, and release coordination. I ensure zero ambiguity between business intent and engineering delivery.</p>
+        <div class="exp-tags">
+          <span class="tag">BRDs & FRDs</span>
+          <span class="tag">User Stories</span>
+          <span class="tag">Acceptance Criteria</span>
+          <span class="tag">Lucidchart</span>
+          <span class="tag">Jira</span>
+          <span class="tag">Gap Analysis</span>
+          <span class="tag">UAT</span>
+          <span class="tag">Stakeholder Mgmt</span>
+        </div>
+      </div>
+      <div class="exp-card secondary">
+        <div class="exp-icon teal">💳</div>
+        <h3>Payments & Platform Integrations</h3>
+        <p>Deep hands-on experience with payment gateway integrations, PSP migrations, and third-party platform connections. I've owned transaction reliability, settlement visibility, and chargeback workflows across Stripe, Adyen, and Ryft.</p>
+        <div class="exp-tags">
+          <span class="tag">Stripe</span>
+          <span class="tag">Adyen</span>
+          <span class="tag">Ryft</span>
+          <span class="tag">Postman</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">PSP Migration</span>
+          <span class="tag">EPOS</span>
+          <span class="tag">UrbanPiper</span>
+        </div>
+      </div>
+      <div class="exp-card tertiary">
+        <div class="exp-icon amber">🧪</div>
+        <h3>QA Strategy & Test Automation</h3>
+        <p>Built automation frameworks from scratch using Cypress and Playwright, integrated into CI/CD pipelines. I bring a QA mindset to BA work — writing testable requirements and acceptance criteria that reduce defect rates at source.</p>
+        <div class="exp-tags">
+          <span class="tag">Cypress</span>
+          <span class="tag">Playwright</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Postman API Testing</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">Test Planning</span>
+          <span class="tag">Defect Triage</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience" id="experience">
+  <div class="section-inner">
+    <span class="section-tag">Career Timeline</span>
+    <h2 class="section-title">Professional Experience</h2>
+    <p class="section-sub">A decade of progressive ownership across SaaS, ERP, and payments delivery.</p>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot">🚀</div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-role">Business Analyst / Scrum Master / Project Manager</div>
+              <div class="timeline-company">Kayana — UK-based Hospitality SaaS</div>
+            </div>
+            <div class="timeline-date">Oct 2024 – May 2026</div>
+          </div>
+          <p class="timeline-desc">Owned end-to-end product delivery across EPOS, Kiosk, Ticketing, Ordering, and Admin platforms for a UK-based hospitality tech company serving restaurant and retail merchants.</p>
+          <ul class="achievements">
+            <li>Owned full requirements lifecycle — BRDs, user stories, acceptance criteria, Lucidchart process diagrams with CEO-level sign-off before engineering handoff</li>
+            <li>Served as <strong>Scrum Master</strong> across all product squads — sprint planning, standups, backlog refinement, retrospectives, release coordination</li>
+            <li>Served as <strong>primary production issue owner</strong> — triage, root cause, Jira ticket, engineering fix, patch rollout</li>
+            <li><strong>Reduced production payment failures by 30%</strong> and improved system uptime by 20%</li>
+            <li>Led integrations: EPOSNOW, UrbanPiper, Uber Eats, Just Eat — specs, engineering coordination, UAT validation</li>
+            <li>Documented payment flows for <strong>Stripe, Adyen, and Ryft</strong> — improved transaction reliability and reporting visibility</li>
+            <li>Managed <strong>Odoo ERP</strong> production issues and development requests end-to-end</li>
+            <li><strong>Established Srinagar office</strong> from scratch — procured space, configured hardware (EPOS, Kiosks, MPOSes, card terminals), recruited and onboarded team</li>
+            <li>Improved sprint delivery efficiency by <strong>25%</strong> through structured Agile ceremonies</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot">⚙️</div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-role">Business Analyst / QA Lead</div>
+              <div class="timeline-company">Qbil / Yarikul Infotech — ERP Solutions</div>
+            </div>
+            <div class="timeline-date">Jun 2017 – Nov 2023</div>
+          </div>
+          <p class="timeline-desc">Led ERP product delivery for international clients across finance, inventory, warehouse, and logistics domains. Primary bridge between stakeholders, clients, and development teams.</p>
+          <ul class="achievements">
+            <li>Gathered, analysed, and documented functional requirements, workflows, and solution specifications for complex ERP implementations</li>
+            <li>Created Lucidchart process diagrams and implementation workflows for solution design and stakeholder communication</li>
+            <li>Managed Jira boards end-to-end — user stories, acceptance criteria, sprint organisation, delivery tracking</li>
+            <li>Led UAT cycles and release validation — defect-free deployments for enterprise ERP clients</li>
+            <li><strong>Reduced QA cycle time by 60%</strong> through Playwright test automation frameworks</li>
+            <li>Managed integrations with accounting, logistics, and operational systems — API contracts, data flow documentation</li>
+            <li>Participated in effort estimation, customer onboarding workshops, and solution design for large-scale ERP implementations</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot">🤖</div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-role">Senior Automation Engineer</div>
+              <div class="timeline-company">Founder & Lightning</div>
+            </div>
+            <div class="timeline-date">May 2024 – Oct 2024</div>
+          </div>
+          <ul class="achievements">
+            <li>Built scalable E2E automation frameworks using <strong>Cypress</strong> — improved coverage by 40%, integrated into CI/CD pipelines</li>
+            <li>Designed and maintained Postman collections for API testing — validated request/response contracts, auth flows, integration endpoints</li>
+            <li>Provided QA strategy input to product teams — defined acceptance criteria and test plans aligned with business requirements</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot">🔧</div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-role">QA Automation Engineer</div>
+              <div class="timeline-company">Shansoftech Pvt. Ltd.</div>
+            </div>
+            <div class="timeline-date">Jan 2024 – Apr 2024</div>
+          </div>
+          <ul class="achievements">
+            <li>Developed automation frameworks using <strong>Playwright and TypeScript</strong> — reduced manual regression effort and improved release confidence</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot">🌐</div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-role">Network Engineer</div>
+              <div class="timeline-company">HCL Technologies</div>
+            </div>
+            <div class="timeline-date">Jun 2016 – May 2017</div>
+          </div>
+          <ul class="achievements">
+            <li>Managed enterprise network infrastructure and ensured SLA compliance across client environments</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- METRICS -->
+<section class="metrics" id="impact">
+  <div class="section-inner">
+    <span class="section-tag">Measurable Impact</span>
+    <h2 class="section-title">Numbers That Matter</h2>
+    <p class="section-sub">Every achievement is backed by a real outcome, not just activity.</p>
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-num">30%</div>
+        <div class="metric-label">Production Failures Reduced</div>
+        <div class="metric-sub">Payment & ordering reliability at Kayana</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">60%</div>
+        <div class="metric-label">QA Cycle Time Cut</div>
+        <div class="metric-sub">Via Playwright automation at Qbil</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">25%</div>
+        <div class="metric-label">Sprint Efficiency Improved</div>
+        <div class="metric-sub">Structured Agile ceremonies at Kayana</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">40%</div>
+        <div class="metric-label">Automation Coverage Increased</div>
+        <div class="metric-sub">Cypress frameworks at Founder & Lightning</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">20%</div>
+        <div class="metric-label">System Uptime Improved</div>
+        <div class="metric-sub">Order processing reliability at Kayana</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">35%</div>
+        <div class="metric-label">Issue Resolution Time Reduced</div>
+        <div class="metric-sub">Cross-team workflows at Kayana</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">5</div>
+        <div class="metric-label">Platforms Managed Simultaneously</div>
+        <div class="metric-sub">Kiosk · EPOS · MPOS · KDS · Partners Admin · Web Admin · White Label Apps · Business Apps · Ticketing</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">10+</div>
+        <div class="metric-label">Years of Delivery Experience</div>
+        <div class="metric-sub">BA · PM · Scrum Master · QA Lead</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-inner">
+    <span class="section-tag">Skills & Tools</span>
+    <h2 class="section-title">Technical Proficiency</h2>
+    <p class="section-sub">A balanced mix of business, delivery, and technical skills.</p>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3>Business Analysis & PM</h3>
+        <div class="skill-item"><span class="skill-name">Requirements Gathering & BRDs</span><div class="skill-bar"><div class="skill-fill" style="width:98%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">User Stories & Acceptance Criteria</span><div class="skill-bar"><div class="skill-fill" style="width:98%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Stakeholder Management</span><div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Process Mapping (Lucidchart)</span><div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Agile / Scrum Delivery</span><div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">UAT Planning & Execution</span><div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div></div>
+      </div>
+      <div class="skill-group">
+        <h3>Technical & Payments</h3>
+        <div class="skill-item"><span class="skill-name">Jira & Confluence</span><div class="skill-bar"><div class="skill-fill" style="width:97%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Postman & API Testing</span><div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Payments (Stripe, Adyen, Ryft)</span><div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Cypress & Playwright</span><div class="skill-bar"><div class="skill-fill" style="width:82%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">SQL & Data Analysis</span><div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div></div>
+        <div class="skill-item"><span class="skill-name">Figma & Wireframing</span><div class="skill-bar"><div class="skill-fill" style="width:78%"></div></div></div>
+      </div>
+    </div>
+    <div class="tools-grid">
+      <div class="tool-category">
+        <h4>BA & Collaboration</h4>
+        <div class="tool-pills">
+          <span class="tool-pill">Jira</span>
+          <span class="tool-pill">Confluence</span>
+          <span class="tool-pill">Lucidchart</span>
+          <span class="tool-pill">Miro</span>
+          <span class="tool-pill">Figma</span>
+        </div>
+      </div>
+      <div class="tool-category">
+        <h4>Testing & API</h4>
+        <div class="tool-pills">
+          <span class="tool-pill">Postman</span>
+          <span class="tool-pill">Cypress</span>
+          <span class="tool-pill">Playwright</span>
+          <span class="tool-pill">TypeScript</span>
+          <span class="tool-pill">CI/CD</span>
+        </div>
+      </div>
+      <div class="tool-category">
+        <h4>Platforms & ERP</h4>
+        <div class="tool-pills">
+          <span class="tool-pill">Odoo ERP</span>
+          <span class="tool-pill">EPOSNOW</span>
+          <span class="tool-pill">UrbanPiper</span>
+          <span class="tool-pill">Stripe</span>
+          <span class="tool-pill">Adyen</span>
+          <span class="tool-pill">Ryft</span>
+        </div>
+      </div>
+      <div class="tool-category">
+        <h4>Design & Frontend</h4>
+        <div class="tool-pills">
+          <span class="tool-pill">HTML</span>
+          <span class="tool-pill">CSS</span>
+          <span class="tool-pill">JavaScript</span>
+          <span class="tool-pill">Figma</span>
+        </div>
+      </div>
+      <div class="tool-category">
+        <h4>Data & Productivity</h4>
+        <div class="tool-pills">
+          <span class="tool-pill">Excel (Advanced)</span>
+          <span class="tool-pill">SQL</span>
+          <span class="tool-pill">Google Sheets</span>
+        </div>
+      </div>
+      <div class="tool-category">
+        <h4>Methodology</h4>
+        <div class="tool-pills">
+          <span class="tool-pill">Agile / Scrum</span>
+          <span class="tool-pill">Sprint Planning</span>
+          <span class="tool-pill">Backlog Mgmt</span>
+          <span class="tool-pill">SDLC</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOMAIN -->
+<section class="domain" id="domain">
+  <div class="section-inner">
+    <span class="section-tag">Domain Knowledge</span>
+    <h2 class="section-title">Industries & Platforms</h2>
+    <p class="section-sub">Proven experience across multiple verticals — with genuine depth in hospitality tech and payments.</p>
+    <div class="domain-grid">
+      <div class="domain-card">
+        <div class="domain-icon">🏪</div>
+        <h3>Hospitality & Retail Tech</h3>
+        <p>EPOS systems, Kiosk platforms, ordering flows, food delivery integrations (Uber Eats, Just Eat, UrbanPiper), merchant operations, and customer-facing digital experiences.</p>
+      </div>
+      <div class="domain-card">
+        <div class="domain-icon">💳</div>
+        <h3>Payments & Fintech</h3>
+        <p>Payment gateway integrations, PSP selection and migration, transaction lifecycle (auth, capture, settlement, chargebacks), webhook handling, and payment reconciliation reporting.</p>
+      </div>
+      <div class="domain-card">
+        <div class="domain-icon">🏭</div>
+        <h3>ERP & Enterprise Systems</h3>
+        <p>Odoo ERP delivery for international clients across finance, inventory, warehouse, and logistics. Integration with accounting, logistics, and operational systems via API.</p>
+      </div>
+      <div class="domain-card">
+        <div class="domain-icon">🚚</div>
+        <h3>Logistics & Supply Chain</h3>
+        <p>Warehouse management, inventory tracking, order fulfilment workflows, and logistics platform delivery for enterprise clients across multiple geographies.</p>
+      </div>
+      <div class="domain-card">
+        <div class="domain-icon">☁️</div>
+        <h3>SaaS Platform Delivery</h3>
+        <p>End-to-end SaaS product lifecycle — from discovery and requirements through configuration, UAT, release, and post-launch production support across B2B and B2C platforms.</p>
+      </div>
+      <div class="domain-card">
+        <div class="domain-icon">🤖</div>
+        <h3>AI-Assisted Delivery</h3>
+        <p>Daily practitioner of AI tools for requirements drafting, user story generation, process documentation, and workflow automation. Genuine productivity multiplier, not surface-level usage.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <span class="section-tag">Get in Touch</span>
+        <h2>Let's Work Together</h2>
+        <p>I'm actively exploring new opportunities in Business Analysis, Project Management, and SaaS delivery. I'm an immediate joiner based in Srinagar with experience working in UK-aligned time zones.</p>
+        <ul class="contact-items">
+          <li>
+            <div class="contact-icon">📧</div>
+            <div>
+              <div class="contact-label">Email</div>
+              <div class="contact-value">tajamulislam.100@gmail.com</div>
+            </div>
+          </li>
+          <li>
+            <div class="contact-icon">📞</div>
+            <div>
+              <div class="contact-label">Phone</div>
+              <div class="contact-value">+91 91494 79287</div>
+            </div>
+          </li>
+          <li>
+            <div class="contact-icon">💼</div>
+            <div>
+              <div class="contact-label">LinkedIn</div>
+              <div class="contact-value">linkedin.com/in/tajamul-islam7112b21a5</div>
+            </div>
+          </li>
+          <li>
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="contact-label">Location</div>
+              <div class="contact-value">Srinagar, Jammu & Kashmir, India</div>
+            </div>
+          </li>
+        </ul>
+        <div class="availability">
+          <div class="avail-dot"></div>
+          <div class="avail-text">Available for immediate joining — open to remote, hybrid, and relocation opportunities</div>
+        </div>
+      </div>
+      <div class="contact-right">
+        <span class="section-tag">Quick Summary</span>
+        <h2 class="section-title" style="font-size:1.6rem;">Why Hire Me?</h2>
+        <br>
+        <div style="display:flex;flex-direction:column;gap:1rem;">
+          <div style="background:var(--white);border:1px solid var(--lgray);border-radius:12px;padding:1.25rem;">
+            <div style="font-weight:700;color:var(--dark);margin-bottom:0.35rem;">🎯 Outcomes, not outputs</div>
+            <div style="color:var(--gray);font-size:0.875rem;">I measure success by business impact — reduced failures, improved uptime, faster delivery — not by tickets closed or documents written.</div>
+          </div>
+          <div style="background:var(--white);border:1px solid var(--lgray);border-radius:12px;padding:1.25rem;">
+            <div style="font-weight:700;color:var(--dark);margin-bottom:0.35rem;">🔗 Bridge builder</div>
+            <div style="color:var(--gray);font-size:0.875rem;">I speak both business and technical — comfortable in a boardroom and in a sprint review with engineers. Requirements I write don't need clarification.</div>
+          </div>
+          <div style="background:var(--white);border:1px solid var(--lgray);border-radius:12px;padding:1.25rem;">
+            <div style="font-weight:700;color:var(--dark);margin-bottom:0.35rem;">⚡ Immediate joiner</div>
+            <div style="color:var(--gray);font-size:0.875rem;">No notice period. Ready to contribute from day one with zero ramp-up needed on tools like Jira, Confluence, Postman, or Agile delivery.</div>
+          </div>
+          <div style="background:var(--white);border:1px solid var(--lgray);border-radius:12px;padding:1.25rem;">
+            <div style="font-weight:700;color:var(--dark);margin-bottom:0.35rem;">🌍 UK-timezone ready</div>
+            <div style="color:var(--gray);font-size:0.875rem;">Proven track record of working with UK-based stakeholders and teams — comfortable with UK business hours and remote-first collaboration.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 <span>Tajamul Islam Kakroo</span> · Senior Business Analyst & Project Manager · Srinagar, India</p>
+</footer>
+
+</body>
+</html>
