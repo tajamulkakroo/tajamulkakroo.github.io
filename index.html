@@ -37,6 +37,7 @@
     overflow-x: hidden;
   }
 
+  /* NAV */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     background: rgba(10,22,40,0.97);
@@ -59,6 +60,7 @@
   }
   .nav-links a:hover { color: var(--white); }
 
+  /* HERO */
   .hero {
     min-height: 100vh;
     background: var(--navy);
@@ -70,7 +72,6 @@
     content: '';
     position: absolute; inset: 0;
     background: radial-gradient(ellipse 70% 60% at 70% 40%, rgba(37,99,235,0.12) 0%, transparent 70%);
-    pointer-events: none;
   }
   .hero-grid {
     max-width: 1100px; margin: 0 auto; width: 100%;
@@ -114,6 +115,7 @@
   }
   .btn-outline:hover { border-color: var(--blue); color: var(--white); }
 
+  /* Hero stats */
   .hero-stats {
     display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;
   }
@@ -136,6 +138,7 @@
   .stat-label { color: #94A3B8; font-size: 0.8rem; font-weight: 500; }
   .stat-sub { color: #64748B; font-size: 0.72rem; margin-top: 0.2rem; }
 
+  /* SECTIONS */
   section { padding: 5rem 2rem; }
   .section-inner { max-width: 1100px; margin: 0 auto; }
   .section-tag {
@@ -154,10 +157,12 @@
     margin-bottom: 3rem; line-height: 1.7;
   }
 
+  /* ABOUT */
   .about { background: var(--off); }
   .about-grid {
     display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start;
   }
+  .about-left { }
   .about-avatar {
     width: 140px; height: 140px; border-radius: 50%;
     background: linear-gradient(135deg, var(--blue), var(--teal));
@@ -183,6 +188,7 @@
   .about-body p { margin-bottom: 1rem; }
   .highlight { color: var(--blue); font-weight: 600; }
 
+  /* EXPERTISE */
   .expertise-grid {
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
   }
@@ -221,6 +227,7 @@
     padding: 0.2rem 0.6rem; border-radius: 6px;
   }
 
+  /* EXPERIENCE */
   .experience { background: var(--navy); }
   .experience .section-title { color: var(--white); }
   .experience .section-sub { color: #64748B; }
@@ -270,6 +277,7 @@
   }
   .achievements li strong { color: #E2E8F0; }
 
+  /* IMPACT METRICS */
   .metrics { background: var(--off); }
   .metrics-grid {
     display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;
@@ -288,6 +296,7 @@
   .metric-label { color: var(--dark); font-weight: 600; font-size: 0.875rem; margin-bottom: 0.35rem; }
   .metric-sub { color: var(--gray); font-size: 0.775rem; }
 
+  /* SKILLS */
   .skills-grid {
     display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;
   }
@@ -312,6 +321,7 @@
     transition: width 1s ease;
   }
 
+  /* TOOLS */
   .tools-grid {
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;
     margin-top: 2rem;
@@ -334,6 +344,7 @@
   }
   .tool-pill:hover { background: rgba(37,99,235,0.08); border-color: var(--blue); color: var(--blue); }
 
+  /* DOMAIN */
   .domain { background: var(--navy); }
   .domain .section-title { color: var(--white); }
   .domain .section-sub { color: #64748B; }
@@ -355,6 +366,7 @@
   .domain-card p { color: #94A3B8; font-size: 0.85rem; line-height: 1.7; }
   .domain-icon { font-size: 1.8rem; margin-bottom: 0.85rem; }
 
+  /* CONTACT */
   .contact { background: var(--off); }
   .contact-grid {
     display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
@@ -394,6 +406,7 @@
   }
   .avail-text { font-size: 0.875rem; color: var(--green); font-weight: 600; }
 
+  /* FOOTER */
   footer {
     background: var(--navy); color: #475569;
     text-align: center; padding: 2rem;
@@ -401,6 +414,7 @@
   }
   footer span { color: var(--blue); }
 
+  /* RESPONSIVE */
   @media (max-width: 768px) {
     .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
     .expertise-grid, .domain-grid { grid-template-columns: 1fr; }
@@ -413,6 +427,7 @@
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
   <div class="nav-logo">Tajamul<span>.</span></div>
   <ul class="nav-links">
@@ -425,12 +440,13 @@
   </ul>
 </nav>
 
+<!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-grid">
     <div class="hero-left">
       <div class="hero-tag">Available for Immediate Joining</div>
       <h1>Senior <em>Business Analyst</em> & Project Manager</h1>
-      <p class="hero-sub">10+ years delivering scalable SaaS, ERP, and payments platforms across hospitality tech, fintech, and logistics. I bridge business and engineering — from requirement to release. Also available for offshore team & office setup consulting.</p>
+      <p class="hero-sub">10+ years of technology experience, including 5+ years across Business Analysis, Project Management, and Agile delivery — spanning SaaS, ERP, and payments platforms in hospitality tech, fintech, and logistics. I bridge business and engineering — from requirement to release. Also available for offshore team & office setup consulting.</p>
       <div class="hero-btns">
         <a href="#experience" class="btn-primary">View Experience</a>
         <a href="#contact" class="btn-outline">Get in Touch</a>
@@ -461,6 +477,7 @@
   </div>
 </section>
 
+<!-- ABOUT -->
 <section class="about" id="about">
   <div class="section-inner">
     <div class="about-grid">
@@ -480,7 +497,7 @@
         <span class="section-tag">About Me</span>
         <h2 class="section-title">Bridging Business & Technology for Over a Decade</h2>
         <div class="about-body">
-          <p>I am a results-driven Senior Business Analyst and Project Manager with <span class="highlight">10+ years of experience</span> translating complex business needs into scalable digital solutions. My work spans SaaS platforms, ERP systems, EPOS technology, and payment integrations across hospitality, fintech, and logistics domains.</p>
+          <p>I am a results-driven Senior Business Analyst and Project Manager with <span class="highlight">10+ years of technology experience, including 5+ years across Business Analysis, Project Management, and Agile delivery</span>, translating complex business needs into scalable digital solutions. My work spans SaaS platforms, ERP systems, EPOS technology, and payment integrations across hospitality, fintech, and logistics domains.</p>
           <p>At <span class="highlight">Kayana</span>, a UK-based hospitality SaaS company, I owned the end-to-end product delivery lifecycle across nine platforms simultaneously — managing backlogs, leading Agile ceremonies as Scrum Master, owning production issues, and driving integrations with Stripe, Adyen, Uber Eats, and Just Eat.</p>
           <p>At <span class="highlight">Qbil/Yarikul Infotech</span>, I led end-to-end implementations of a specialist commodity trading ERP for international clients across Europe and the US in the feeds, fats, and oils industry. I delivered across the full trade lifecycle — Contract Management (purchase/sales contracts, credit control, currency hedging, position overview), Order Management (stock provision, back-to-back purchase/sales, sales from stock), Logistics (transport orders, customs, Chamber of Commerce documents), Reporting (Position Overview, P&L, Mark-to-Market, Stock Inventory — economical/technical/historical), and external integrations with accounting software, customs systems, transport management tools, and WMS. I reduced QA cycle time by 60% through Playwright test automation.</p>
           <p>I combine strong analytical thinking, structured documentation discipline, and genuine technical literacy — comfortable with APIs, Postman, SQL, Figma, and automation frameworks alongside Jira, Confluence, and Lucidchart.</p>
@@ -490,6 +507,7 @@
   </div>
 </section>
 
+<!-- EXPERTISE -->
 <section id="expertise">
   <div class="section-inner">
     <span class="section-tag">Core Expertise</span>
@@ -499,7 +517,7 @@
       <div class="exp-card primary">
         <div class="exp-icon blue">📋</div>
         <h3>Business Analysis & Product Management</h3>
-        <p>End-to-end requirements lifecycle — from stakeholder discovery and BRD creation to user stories, acceptance criteria, and release coordination. I ensure zero ambiguity between business intent and engineering delivery.</p>
+        <p>End-to-end requirements lifecycle — from stakeholder discovery and BRD creation to user stories, acceptance criteria, and release coordination. I reduce ambiguity and rework between business intent and engineering delivery.</p>
         <div class="exp-tags">
           <span class="tag">BRDs & FRDs</span>
           <span class="tag">User Stories</span>
@@ -555,6 +573,7 @@
   </div>
 </section>
 
+<!-- EXPERIENCE -->
 <section class="experience" id="experience">
   <div class="section-inner">
     <span class="section-tag">Career Timeline</span>
@@ -567,14 +586,14 @@
         <div class="timeline-content">
           <div class="timeline-header">
             <div>
-              <div class="timeline-role">Freelance Consultant — POS/Digital Ordering Systems & Offshore Team Setup</div>
+              <div class="timeline-role">Independent Consultant — POS/Digital Ordering Systems & Offshore Team Setup</div>
               <div class="timeline-company">Independent Consulting</div>
             </div>
             <div class="timeline-date">Jun 2026 – Present</div>
           </div>
           <p class="timeline-desc">Advising early-stage founders and product teams building POS, digital ordering, and hospitality-tech platforms, drawing on 10+ years delivering EPOS, KDS, QR ordering, and payments systems at scale. In parallel, helping international companies establish and scale offshore delivery teams and office operations in India, based on hands-on experience building a 20-person technical delivery office from the ground up.</p>
           <ul class="achievements">
-            <li>Advisory engagement with early-stage hospitality-tech founders on order lifecycle reliability, menu/pricing architecture, and payment flow design</li>
+            <li>Advised 4 early-stage startups on order lifecycle reliability, menu/pricing architecture, and payment flow design</li>
             <li><strong>Offshore office setup</strong> — space procurement, hardware sourcing, hiring, and team structure design for companies establishing an India-based presence</li>
           </ul>
         </div>
@@ -684,6 +703,7 @@
   </div>
 </section>
 
+<!-- METRICS -->
 <section class="metrics" id="impact">
   <div class="section-inner">
     <span class="section-tag">Measurable Impact</span>
@@ -734,6 +754,7 @@
   </div>
 </section>
 
+<!-- SKILLS -->
 <section id="skills">
   <div class="section-inner">
     <span class="section-tag">Skills & Tools</span>
@@ -821,6 +842,7 @@
   </div>
 </section>
 
+<!-- DOMAIN -->
 <section class="domain" id="domain">
   <div class="section-inner">
     <span class="section-tag">Domain Knowledge</span>
@@ -861,6 +883,7 @@
   </div>
 </section>
 
+<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="section-inner">
     <div class="contact-grid">
@@ -930,6 +953,7 @@
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <p>© 2026 <span>Tajamul Islam Kakroo</span> · Senior Business Analyst & Project Manager · Srinagar, India</p>
 </footer>
